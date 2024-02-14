@@ -80,13 +80,13 @@ Rectangulo::Rectangulo(int x, int y, int w, int h)
 
 // Ancho
 
-getAncho()
+Rectangulo::getAncho()
 {
 
     return ancho;
 }
 
-setAncho(int w)
+Rectangulo::setAncho(int w)
 {
 
     if (ancho <= 0)
@@ -98,13 +98,13 @@ setAncho(int w)
     // Altura
 }
 
-getAltura()
+Rectangulo::getAltura()
 {
 
     return altura;
 }
 
-setAltura(int h)
+Rectangulo::setAltura(int h)
 {
 
     if (altura <= 0)
@@ -114,14 +114,14 @@ setAltura(int h)
     }
 }
 
-getArea()
+Rectangulo::getArea()
 {
 
     area = (ancho * altura);
     cout << "El area del rectángulo es: " << area << endl;
 }
 
-intersecta(Rectangulo rect)
+Rectangulo::intersecta(Rectangulo rect)
 {
 
     // eje X
