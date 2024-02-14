@@ -32,31 +32,31 @@ int main()
 {
     Rectangulo rec1;
     rec1.setAncho(20);
-    rec1.setAlto(5);
-    rec1.esquinaX(10);
-    rec1.esquinaY(10);
+    rec1.setAltura(5);
+    rec1.esquinaX = 10;
+    rec1.esquinaY = 10;
 
     Rectangulo rec2;
     rec2.setAncho(20);
-    rec2.setAlto(5);
-    rec2.esquinaX(30);
-    rec2.esquinaY(5);
+    rec2.setAltura(5);
+    rec2.esquinaX = 30;
+    rec2.esquinaY = 5;
 
     Rectangulo rec3;
     rec3.setAncho(20);
-    rec3.setAlto(5);
-    rec3.esquinaX(15);
-    rec3.esquinaY(30);
+    rec3.setAltura(5);
+    rec3.esquinaX = 15;
+    rec3.esquinaY = 30;
 
-    cout << "El area del rectángulo" << rec1 << "es: " << area << endl;
-    cout << "El area del rectángulo" << rec2 << "es: " << area << endl;
-    cout << "El area del rectángulo" << rec3 << "es: " << area << endl;
+    cout << "El area del rectángulo 1 es: " << rec1.setArea << endl;
+    cout << "El area del rectángulo 2 es: " << rec2.setArea << endl;
+    cout << "El area del rectángulo 3 es: " << rec3.setArea << endl;
 
     intersecta(Rectangulo rect);
 
-    cout << "El rectángulo" << rec1 << " y " << rec2 << intersecta(Rectangulo rect) << endl;
-    cout << "El rectángulo" << rec1 << " y " << rec3 << intersecta(Rectangulo rect) << endl;
-    cout << "El rectángulo" << rec2 << " y " << rec3 << intersecta(Rectangulo rect) << endl;
+    cout << "El rectángulo" << rec1 << " y " << rec2 << intersecta << endl;
+    cout << "El rectángulo" << rec1 << " y " << rec3 << intersecta << endl;
+    cout << "El rectángulo" << rec2 << " y " << rec3 << intersecta << endl;
 }
 
 // Constructores
