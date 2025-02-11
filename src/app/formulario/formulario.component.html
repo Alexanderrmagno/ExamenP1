@@ -8,32 +8,32 @@
         <div class="form-group">
           <label>Nombre de Pelicula:</label>
           <input type="text" name="movieName" [(ngModel)]="formData.movieName" required class="form-control" />
-          <span class="error" *ngIf="errors.movieName">{{ errors.movieName }}</span>
+          <span class="error" *ngIf="errors.movieName">{{ error.AddmovieName }}</span>
         </div>
 
         <div class="form-group">
           <label>Año de Lanzamiento: </label>
           <input type="number" name="releaseYear" [(ngModel)]="formData.releaseYear" required class="form-control" />
-          <span class="error" *ngIf="errors.releaseYear">{{ errors.releaseYear }}</span>
+          <span class="error" *ngIf="errors.releaseYear">{{ errors.AddreleaseYear }}</span>
         </div>
 
         <div class="form-group">
           <label>Nombre de Productor: </label>
           <input type="text" name="producerName" [(ngModel)]="formData.producerName" required class="form-control" />
-          <span class="error" *ngIf="errors.producerName">{{ errors.producerName }}</span>
+          <span class="error" *ngIf="errors.producerName">{{ error.AddproducerName }}</span>
         </div>
 
         <div class="form-group">
           <label>Casa Productora: </label>
           <input type="text" name="productionHouse" [(ngModel)]="formData.productionHouse" required
             class="form-control" />
-          <span class="error" *ngIf="errors.productionHouse">{{ errors.productionHouse }}</span>
+          <span class="error" *ngIf="errors.productionHouse">{{ error.AddproductionHouse }}</span>
         </div>
 
         <div class="form-group">
           <label>Protagonista: </label>
           <input type="text" name="mainActor" [(ngModel)]="formData.mainActor" required class="form-control" />
-          <span class="error" *ngIf="errors.mainActor">{{ errors.mainActor }}</span>
+          <span class="error" *ngIf="errors.mainActor">{{ error.mainActor }}</span>
         </div>
 
         <button type="submit" class="submit-button">
