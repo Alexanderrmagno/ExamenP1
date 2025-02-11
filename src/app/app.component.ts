@@ -1,39 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { ExamenService } from './services/examen.service';
+import { Component } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-root',
+  standalone: true,
+  imports: [IonicModule, CommonModule],  
+  template: `
+    <ion-app>
+      <ion-router-outlet></ion-router-outlet>
+    </ion-app>
+  `
 })
-export class HomeComponent implements OnInit {
-  quote: any;
-  loading = false;
-  error = '';
-
-  constructor(private examenService: ExamenService) { }
-
-  ngOnInit(): void {
-    this.getQuote();
-  }
-
-  getQuote(): void {
-    this.loading = true;
-    this.examenService.getRandomQuote()
-      .subscribe({
-        next: (data) => {
-          this.quote = data[0];
-          this.loading = false;
-        },
-        error: (error) => {
-          this.error = 'Error al cargar la cita';
-          this.loading = false;
-          console.error('Error:', error);
-        }
-      });
-  }
-}
-
 export class AppComponent {
-  title = 'angular-testing';
+  constructor() {}
 }
