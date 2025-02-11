@@ -1,0 +1,25 @@
+.quote-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .quote-content {
+    margin-top: 20px;
+    
+    .quote {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    
+    .author {
+      font-style: italic;
+      color: #666;
+    }
+  }
+  
+  .error {
+    color: red;
+    margin: 20px 0;
+  }

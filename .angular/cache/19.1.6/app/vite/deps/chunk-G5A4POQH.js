@@ -29578,8 +29578,8 @@ if (typeof ngDevMode !== "undefined" && ngDevMode) {
 }
 
 export {
-  __decorate,
   SIGNAL,
+  __decorate,
   Subscription,
   pipe,
   Observable,
@@ -30178,4 +30178,4 @@ export {
    * found in the LICENSE file at https://angular.dev/license
    *)
 */
-//# sourceMappingURL=chunk-IT4SHZUX.js.map
+//# sourceMappingURL=chunk-G5A4POQH.js.map
