@@ -1,3 +1,68 @@
-<p>
-  formulario works!
-</p>
+<div class="p-4 max-w-4xl mx-auto">
+  <div class="card">
+    <div class="card-header">
+      <h2>Formulario</h2>
+    </div>
+    <div class="card-content">
+      <form (ngSubmit)="onSubmit()" #movieForm="ngForm">
+        <div class="form-group">
+          <label>Nombre de Pelicula:</label>
+          <input type="text" name="movieName" [(ngModel)]="formData.movieName" required class="form-control" />
+          <span class="error" *ngIf="errors.movieName">{{ errors.movieName }}</span>
+        </div>
+
+        <div class="form-group">
+          <label>Año de Lanzamiento: </label>
+          <input type="number" name="releaseYear" [(ngModel)]="formData.releaseYear" required class="form-control" />
+          <span class="error" *ngIf="errors.releaseYear">{{ errors.releaseYear }}</span>
+        </div>
+
+        <div class="form-group">
+          <label>Nombre de Productor: </label>
+          <input type="text" name="producerName" [(ngModel)]="formData.producerName" required class="form-control" />
+          <span class="error" *ngIf="errors.producerName">{{ errors.producerName }}</span>
+        </div>
+
+        <div class="form-group">
+          <label>Casa Productora: </label>
+          <input type="text" name="productionHouse" [(ngModel)]="formData.productionHouse" required
+            class="form-control" />
+          <span class="error" *ngIf="errors.productionHouse">{{ errors.productionHouse }}</span>
+        </div>
+
+        <div class="form-group">
+          <label>Protagonista: </label>
+          <input type="text" name="mainActor" [(ngModel)]="formData.mainActor" required class="form-control" />
+          <span class="error" *ngIf="errors.mainActor">{{ errors.mainActor }}</span>
+        </div>
+
+        <button type="submit" class="submit-button">
+          | Agregar Película |
+        </button>
+      </form>
+
+      <div class="table-container" *ngIf="movies.length > 0">
+        <table>
+          <thead>
+            <tr>
+              <th>Película: </th>
+              <th>Año: </th>
+              <th>Productor: </th>
+              <th>Casa Productora: </th>
+              <th>Protagonista: </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let movie of movies">
+              <td>{{ movie.movieName }}</td>
+              <td>{{ movie.releaseYear }}</td>
+              <td>{{ movie.producerName }}</td>
+              <td>{{ movie.productionHouse }}</td>
+              <td>{{ movie.mainActor }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
